@@ -1,0 +1,75 @@
+Variant 14: average |a[i+1] - a[i]| (adjacent_difference)
+Optimization: O0; repetitions: 20; logical processors: 12
+TBB linked: yes
+
+Length 20000, average = 664533.9162
+Mode          K     Time, ms      Speedup vs no_policy
+no_policy     -     0.1325        1.0000
+seq           -     0.1572        0.8428
+par           -     0.1884        0.7035
+par_unseq     -     0.2402        0.5517
+
+Own parallel algorithm (Speedup is vs K=1):
+Mode          K     Time, ms      Speedup
+own           1     0.3061        1.0000
+own           2     0.2922        1.0477
+own           4     0.3284        0.9321
+own           8     0.3868        0.7914
+own           12    0.6148        0.4979
+own           16    0.7688        0.3982
+own           32    1.3827        0.2214
+Best K = 2; K / processors = 0.1667
+
+Length 100000, average = 666045.7707
+Mode          K     Time, ms      Speedup vs no_policy
+no_policy     -     0.6513        1.0000
+seq           -     0.8540        0.7627
+par           -     0.4118        1.5816
+par_unseq     -     0.3152        2.0665
+
+Own parallel algorithm (Speedup is vs K=1):
+Mode          K     Time, ms      Speedup
+own           1     0.8680        1.0000
+own           2     0.6541        1.3271
+own           4     0.5675        1.5295
+own           8     0.5541        1.5667
+own           12    0.6971        1.2452
+own           16    0.8364        1.0378
+own           32    1.4784        0.5871
+Best K = 8; K / processors = 0.6667
+
+Length 500000, average = 665381.8726
+Mode          K     Time, ms      Speedup vs no_policy
+no_policy     -     3.9099        1.0000
+seq           -     5.0300        0.7773
+par           -     2.0800        1.8797
+par_unseq     -     1.9457        2.0095
+
+Own parallel algorithm (Speedup is vs K=1):
+Mode          K     Time, ms      Speedup
+own           1     4.1455        1.0000
+own           2     2.4584        1.6863
+own           4     1.6742        2.4761
+own           8     1.3533        3.0632
+own           12    1.4888        2.7845
+own           16    1.3930        2.9759
+own           32    1.8144        2.2848
+Best K = 8; K / processors = 0.6667
+
+Length 2000000, average = 666623.8535
+Mode          K     Time, ms      Speedup vs no_policy
+no_policy     -     15.3313       1.0000
+seq           -     19.1864       0.7991
+par           -     7.0933        2.1614
+par_unseq     -     7.0213        2.1835
+
+Own parallel algorithm (Speedup is vs K=1):
+Mode          K     Time, ms      Speedup
+own           1     16.2310       1.0000
+own           2     8.9897        1.8055
+own           4     5.8594        2.7701
+own           8     5.1942        3.1248
+own           12    4.6310        3.5049
+own           16    4.0013        4.0564
+own           32    3.9640        4.0946
+Best K = 32; K / processors = 2.6667
